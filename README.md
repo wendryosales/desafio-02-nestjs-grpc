@@ -22,3 +22,10 @@ Para executar este projeto, siga os seguintes passos:
 Após a conclusão, os dois containers estarão em execução. A aplicação NestJS estará acessível na porta 3000. Você poderá acessar os endpoints da aplicação em http://localhost:3000.
 
 o banco de dados padrão é SQLite em memória, o que significa que os dados serão perdidos quando os containers forem desligados. 
+
+
+## Docker Images
+
+* [NestJS](https://hub.docker.com/r/wendryo/desafio-02-grpc-nestjs)
+
+* [Golang](https://hub.docker.com/r/wendryo/desafio-01-grpc-golang)
