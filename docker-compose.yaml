@@ -1,0 +1,21 @@
+services:
+  nestjs-app:
+    image: wendryo/desafio-02-grpc-nestjs # Mesma imagem do Dockerfile local deste repo.
+    ports:
+      - 3000:3000
+    environment:
+      - GRPC_URL=grpc-service:50051
+      - NODE_ENV=development
+      - PORT=3000
+    depends_on:
+      - grpc-service
+
+  grpc-service:
+    image: wendryo/desafio-01-grpc-golang # Desafio imagem  --> https://github.com/wendryosales/desafio-01-gRPC
+    ports:
+      - 50051:50051
+    environment:
+      - dsn="product-golang"
+      - env="dev"
+      - debug=true
+      - AutoMigrateDb=true
